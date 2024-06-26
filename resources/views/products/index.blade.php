@@ -3,16 +3,26 @@
 
 @section('content')
 
-<p>Cari Data :</p>
-    <form action="/products/cari" method="GET">
-        <input type="text" name="cari" placeholder="Cari .." value="{{ old('cari') }}">
-        <input type="submit" value="CARI">
-    </form>
+
+    <form
+    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search border" action="/products/cari" method="GET">
+    <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+            aria-label="Search" aria-describedby="basic-addon2" value="{{ old('cari') }}">
+        <div class="input-group-append">
+            <input type="submit" value="Search" class="btn btn-primary">
+        </div>
+    </div>
+</form>
+
 
     <br/>
 
-    <a href="/products/cetak/pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
+
+
 <div class="container mt-5">
+    <a href="/products/cetak/pdf" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
     <div class="row">
         <div class="col-md-12">
             <div class="card border-0 shadow-sm rounded">

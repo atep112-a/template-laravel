@@ -4,7 +4,7 @@
 @section('content')
 
 
-<h1>AKU DAN KAMU</h1>
+<h1>Welcome</h1>
 
 
 @endsection
